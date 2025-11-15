@@ -12,22 +12,42 @@ const models = [
     type: "lightweight" as ModelType,
     title: "Lightweight Model",
     icon: Zap,
-    description: "Simplified simulation with minimal features",
-    features: ["Basic lap tracking", "Simple speed calculations", "Quick results"],
+    description: "Basic independent parameters",
+    features: [
+      "Top Speed",
+      "Vehicle Mass",
+      "Drag Coefficient",
+      "Quick simulation",
+    ],
+    paramCount: 3,
   },
   {
     type: "medium" as ModelType,
     title: "Medium Model",
     icon: Gauge,
-    description: "More detailed with additional parameters",
-    features: ["Advanced lap tracking", "Pit stop strategies", "Weather effects"],
+    description: "Intermediate calculations with interactions",
+    features: [
+      "Top Speed & Mass",
+      "Engine Torque",
+      "Downforce & Drag",
+      "Tire Radius",
+      "Balanced complexity",
+    ],
+    paramCount: 6,
   },
   {
     type: "heavy" as ModelType,
     title: "Heavy Model",
     icon: Trophy,
-    description: "Full-scale simulation with advanced features",
-    features: ["Real-time telemetry", "Tire degradation", "Fuel management", "DRS zones"],
+    description: "Full interdependencies with advanced physics",
+    features: [
+      "Complete aerodynamics",
+      "Drive train ratios",
+      "Rolling resistance",
+      "Air density effects",
+      "Maximum realism",
+    ],
+    paramCount: 10,
   },
 ];
 
@@ -66,6 +86,9 @@ const ModelSelection = ({ model, setModel }: ModelSelectionProps) => {
                 </div>
                 <CardTitle className="text-xl">{m.title}</CardTitle>
                 <CardDescription>{m.description}</CardDescription>
+                <div className="mt-2 text-xs text-muted-foreground">
+                  {m.paramCount} configurable parameters
+                </div>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
