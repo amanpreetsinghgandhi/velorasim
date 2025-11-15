@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Flag, Trophy, Zap } from "lucide-react";
 import { ModelType } from "../RaceWizard";
 import { toast } from "sonner";
+import Track from "./Track";
 
 interface RaceSimulationProps {
   drivers: string[];
@@ -155,6 +156,16 @@ const RaceSimulation = ({
       {isRacing && (
         <>
           <Progress value={(currentLap / TOTAL_LAPS) * 100} className="h-3" />
+
+          {/* Track visualization */}
+          <Track
+            carPositions={cars.map((car) => ({
+              driver: car.driver,
+              position: car.position,
+              progress: (car.currentLap / TOTAL_LAPS) * 100,
+              isInPit: car.isInPit,
+            }))}
+          />
 
           <div className="space-y-3">
             {cars.map((car, index) => (
