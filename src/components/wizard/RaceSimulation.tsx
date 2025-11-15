@@ -27,7 +27,7 @@ interface CarState {
   position: number;
 }
 
-const TOTAL_LAPS = 20;
+const TOTAL_LAPS = 67;
 const LAP_BASE_TIME = 90; // seconds
 const PIT_STOP_TIME = 25; // seconds
 
