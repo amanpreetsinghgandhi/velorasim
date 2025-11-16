@@ -15,12 +15,12 @@ interface ParametersConfigProps {
 
 const PARAMETER_CONFIGS = {
   lightweight: [
-    { key: "topSpeed", label: "Top Speed", unit: "km/h", min: 250, max: 400 },
+    { key: "topSpeed", label: "Top Speed", unit: "km/h", min: 150, max: 400 },
     { key: "vehicleMass", label: "Vehicle Mass", unit: "kg", min: 700, max: 900 },
     { key: "dragCoeff", label: "Drag Coefficient", unit: "", min: 0.5, max: 1.0, step: 0.01 },
   ],
   medium: [
-    { key: "topSpeed", label: "Top Speed", unit: "km/h", min: 250, max: 400 },
+    { key: "topSpeed", label: "Top Speed", unit: "km/h", min: 150, max: 400 },
     { key: "vehicleMass", label: "Vehicle Mass", unit: "kg", min: 700, max: 900 },
     { key: "engineTorqueCurve", label: "Engine Torque", unit: "Nm", min: 400, max: 600 },
     { key: "dragCoeff", label: "Drag Coefficient", unit: "", min: 0.5, max: 1.0, step: 0.01 },
@@ -28,7 +28,7 @@ const PARAMETER_CONFIGS = {
     { key: "tireRadius", label: "Tire Radius", unit: "m", min: 0.3, max: 0.4, step: 0.01 },
   ],
   heavy: [
-    { key: "topSpeed", label: "Top Speed", unit: "km/h", min: 250, max: 400 },
+    { key: "topSpeed", label: "Top Speed", unit: "km/h", min: 150, max: 400 },
     { key: "vehicleMass", label: "Vehicle Mass", unit: "kg", min: 700, max: 900 },
     { key: "engineTorqueCurve", label: "Engine Torque", unit: "Nm", min: 400, max: 600 },
     { key: "finalDriveRatio", label: "Final Drive Ratio", unit: "", min: 2.5, max: 3.5, step: 0.1 },
