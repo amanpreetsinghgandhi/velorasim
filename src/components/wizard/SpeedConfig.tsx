@@ -12,8 +12,8 @@ interface SpeedConfigProps {
 const SpeedConfig = ({ speeds, setSpeeds, driverCount }: SpeedConfigProps) => {
   const updateSpeed = (index: number, value: string) => {
     const speed = parseInt(value) || 0;
-    if (speed < 250 || speed > 400) {
-      toast.error("Speed must be between 250-400 km/h");
+    if (speed < 150 || speed > 400) {
+      toast.error("Speed must be between 150-400 km/h");
       return;
     }
     const newSpeeds = [...speeds];
@@ -32,7 +32,7 @@ const SpeedConfig = ({ speeds, setSpeeds, driverCount }: SpeedConfigProps) => {
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold mb-2">Configure Car Speeds</h2>
         <p className="text-muted-foreground">
-          Set the top speed for each car (250-400 km/h)
+          Set the top speed for each car (150-400 km/h)
         </p>
       </div>
 
@@ -53,7 +53,7 @@ const SpeedConfig = ({ speeds, setSpeeds, driverCount }: SpeedConfigProps) => {
                 <div className="relative">
                   <Input
                     type="number"
-                    min="250"
+                    min="150"
                     max="400"
                     value={speeds[index] || 330}
                     onChange={(e) => updateSpeed(index, e.target.value)}
